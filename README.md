@@ -40,8 +40,8 @@ Future: RESTful architecture
 
 3. Open the /src/main/resources/application.properties and configure the JDBC driver which will connect the application to your MySQL database. You should change the value attributes of those two xml tags.
 
-spring.datasource.username=user
-spring.datasource.password=pass
+        spring.datasource.username=user
+        spring.datasource.password=pass
 
 4. Make Maven force update
 
