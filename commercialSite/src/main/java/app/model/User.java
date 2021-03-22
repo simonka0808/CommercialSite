@@ -25,6 +25,8 @@ public class User {
 	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
 	@Column(name = "user_id")
 	private String userID;
+	@Column
+	private String username;
 	@Column(name = "first_name")
 	private String firstName;
 	@Column(name = "last_name")

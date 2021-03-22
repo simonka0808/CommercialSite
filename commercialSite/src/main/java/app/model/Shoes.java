@@ -24,7 +24,8 @@ import lombok.NoArgsConstructor;
 public class Shoes {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(generator = "UUID")
+	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
 	@Column(name = "shoes_id")
 	private String shoesID;
 	@Column(name = "shoes_quantity")
@@ -38,7 +39,7 @@ public class Shoes {
 	@Column(name = "in_stock")
 	private boolean inStock;
 	@Column(name = "shoes_size")
-	private double shoesSize;
+	private int shoesSize;
 	@Column
 	private double price;
 

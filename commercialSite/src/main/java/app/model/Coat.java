@@ -23,7 +23,8 @@ import lombok.NoArgsConstructor;
 public class Coat {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(generator = "UUID")
+	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
 	@Column(name = "coat_id")
 	private String coatID;
 	@Column(name = "coat_quantity")

@@ -16,5 +16,5 @@ public interface CoatRepository extends JpaRepository<Coat, String> {
 
 	List<Coat> findBySize(int size);
 
-	List<Coat> findByBrand(String brandName);
+	List<Coat> findByCoatBrand(String brandName);
 }

@@ -11,6 +11,8 @@ import app.model.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, String> {
 	
-	
+	User findOneByUsername(String username);
 	List<User> findByFirstName(String name);
+	
+	
 }

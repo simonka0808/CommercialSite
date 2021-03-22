@@ -16,9 +16,7 @@ public interface BagRepository extends JpaRepository<Bag, String> {
 
 	List<Bag> findByInStockIsTrue();
 
-	List<Bag> findBySize(int size);
-
-	List<Bag> findByBrand(String brandName);
+	List<Bag> findByBagBrand(String brandName);
 
 	List<Bag> findByDescription(String description);
 

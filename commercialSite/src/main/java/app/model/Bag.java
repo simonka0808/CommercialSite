@@ -25,7 +25,8 @@ import lombok.NoArgsConstructor;
 public class Bag {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(generator = "UUID")
+	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
 	@Column(name = "bag_id")
 	private String bagID;
 	@Column(name = "bag_quantity")
@@ -40,5 +41,7 @@ public class Bag {
 	private boolean inStock;
 	@Column
 	private double price;
+	@Column
+	private String colour;
 
 }

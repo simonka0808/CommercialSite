@@ -3,10 +3,19 @@ package app.service.trousers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import app.model.Trousers;
+import app.repository.bags.BagRepository;
 import app.repository.trousers.TrousersRepository;
-
+import app.service.bags.BagsServiceImpl;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+@Service
+@Data
+@AllArgsConstructor
+@Transactional
 public class TrousersServiceImpl implements TrousersService {
 
 	@Autowired
@@ -22,10 +31,6 @@ public class TrousersServiceImpl implements TrousersService {
 		return trousersRepository.findByInStockIsTrue();
 	}
 
-	@Override
-	public List<Trousers> getAllTrousersBySpecificSize(int size) {
-		return trousersRepository.findBySize(size);
-	}
 
 	@Override
 	public List<Trousers> getAllTrousersByPrice(double price) {
@@ -34,7 +39,7 @@ public class TrousersServiceImpl implements TrousersService {
 
 	@Override
 	public List<Trousers> getAllTrousersByModel(String model) {
-		return trousersRepository.findBytrousersModel(model);
+		return trousersRepository.findByTrousersModel(model);
 
 	}
 
@@ -42,5 +47,6 @@ public class TrousersServiceImpl implements TrousersService {
 	public Trousers save(Trousers tr) {
 		return trousersRepository.save(tr);
 	}
+
 
 }

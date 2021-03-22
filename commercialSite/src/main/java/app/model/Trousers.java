@@ -22,7 +22,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Trousers {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(generator = "UUID")
+	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
 	@Column(name = "trousers_id")
 	private String trousersID;
 	@Column(name = "trousers_quantity")

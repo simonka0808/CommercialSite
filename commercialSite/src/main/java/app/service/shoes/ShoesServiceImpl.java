@@ -63,7 +63,7 @@ public class ShoesServiceImpl implements ShoesService {
 
 	@Override
 	public List<Shoes> getAllShoesBySize(int size) {
-		return shoesRepository.findBySizeEquals(size);
+		return shoesRepository.findByShoesSizeEquals(size);
 	}
 
 }

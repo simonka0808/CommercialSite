@@ -8,10 +8,19 @@ import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import app.model.Coat;
+import app.repository.bags.BagRepository;
 import app.repository.coat.CoatRepository;
-
+import app.service.bags.BagsServiceImpl;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+@Service
+@Data
+@AllArgsConstructor
+@Transactional
 public class CoatServiceImpl implements CoatService {
 
 	@Autowired
@@ -39,7 +48,7 @@ public class CoatServiceImpl implements CoatService {
 
 	@Override
 	public List<Coat> getAllCoatsByBrand(String brandName) {
-		return coatRepository.findByBrand(brandName);
+		return coatRepository.findByCoatBrand(brandName);
 	}
 
 }

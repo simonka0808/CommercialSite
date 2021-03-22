@@ -10,8 +10,6 @@ public interface TrousersService {
 
 	public List<Trousers> getAllTrousersInStock();
 
-	public List<Trousers> getAllTrousersBySpecificSize(int size);
-
 	public List<Trousers> getAllTrousersByPrice(double price);
 
 	public List<Trousers> getAllTrousersByModel(String model);

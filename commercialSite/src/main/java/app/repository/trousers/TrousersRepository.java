@@ -14,11 +14,9 @@ public interface TrousersRepository extends JpaRepository<Trousers, String> {
 
 	List<Trousers> findByInStockIsTrue();
 
-	List<Trousers> findBySize(int size);
-
 	List<Trousers> findByPriceGreaterThanEqual(double price);
 
-	List<Trousers> findBytrousersModel(String model);
+	List<Trousers> findByTrousersModel(String model);
 
 
 }

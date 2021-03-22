@@ -1,0 +1,1 @@
+alter table bag add column colour varchar(100) not null;
