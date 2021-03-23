@@ -17,7 +17,6 @@ import lombok.Data;
 @Service
 @Data
 @AllArgsConstructor
-@Transactional
 public class BagsServiceImpl implements BagsService {
 
 	@Autowired

@@ -12,10 +12,10 @@ import app.repository.trousers.TrousersRepository;
 import app.service.bags.BagsServiceImpl;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+
 @Service
 @Data
 @AllArgsConstructor
-@Transactional
 public class TrousersServiceImpl implements TrousersService {
 
 	@Autowired
@@ -30,7 +30,6 @@ public class TrousersServiceImpl implements TrousersService {
 	public List<Trousers> getAllTrousersInStock() {
 		return trousersRepository.findByInStockIsTrue();
 	}
-
 
 	@Override
 	public List<Trousers> getAllTrousersByPrice(double price) {
@@ -47,6 +46,5 @@ public class TrousersServiceImpl implements TrousersService {
 	public Trousers save(Trousers tr) {
 		return trousersRepository.save(tr);
 	}
-
 
 }

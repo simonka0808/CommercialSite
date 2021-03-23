@@ -24,5 +24,5 @@ public interface BagsService {
 	public void deleteBag(String uuid);
 
 	public void updateBag(BagDto dto, String uuid);
-//add, remove, update price, 
+ 
 }

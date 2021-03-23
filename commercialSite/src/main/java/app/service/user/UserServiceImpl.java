@@ -15,7 +15,7 @@ import lombok.Data;
 @Data
 @Service
 @AllArgsConstructor
-@Transactional
+
 public class UserServiceImpl implements UserService {
 
 	@Autowired
